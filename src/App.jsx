@@ -12,9 +12,9 @@ import Login from "./components/Login/Login";
 
 
 const App = () => {
-  // const url = "https://foodmasters-backend.onrender.com"
-  const url = "http://localhost:4000"
-  
+  const url = "https://backend-c6ta.onrender.com"
+  // const url = "http://localhost:4000"
+
   const [token, setToken] = React.useState(localStorage.getItem('adminToken') || "");
 
   React.useEffect(() => {
@@ -25,7 +25,7 @@ const App = () => {
       setToken(adminToken);
       localStorage.setItem('adminToken', adminToken);
       if (adminEmail) localStorage.setItem('adminEmail', adminEmail);
-      window.history.replaceState({}, document.title, "/"); 
+      window.history.replaceState({}, document.title, "/");
     }
   }, []);
 
